@@ -38,10 +38,10 @@ namespace sumIntegers
                         Console.WriteLine(arr1[i] + "," +  arr1[j]);
 
                     }
-                    //else
-                    //{
-                    //    Console.WriteLine("No integers with the tageted sum could be found");
-                    //}
+                    else
+                    {
+                        Console.WriteLine("No integers with the tageted sum could be found");
+                    }
                 }
             }
             Console.Read();
