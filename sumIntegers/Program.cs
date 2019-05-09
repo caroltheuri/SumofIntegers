@@ -18,31 +18,31 @@ namespace sumIntegers
             /* second case: Start with the second element and loop through the entire array and try to get the sum and continue*/
             /* If the sum is the target then break */
             /* If the integers in the array do not add upto the target display a warning*/
-            int[] arr1 = { 2,11,7,15};
-            int sum = 0;
+            int[] arr1 = { 2,11,15,7};
+            int sum =0 ;
+            int index1 = 0;
+            int index2 = 0;
             int target = 9;
-            int start = arr1[0];
-            for (int i=0; i<arr1.Length-1;i++)
+            for (int i=0; i<arr1.Length;i++)
             {
-                sum = start + arr1[i];
-                if (sum == target)
-                {
-                    Console.WriteLine(0 + "," + i);
-                    
-                }
-                for (int j=i+1; j < arr1.Length - 1; j++)
+
+                for (int j = i + 1; j < arr1.Length; j++)
                 {
                     sum = arr1[i] + arr1[j];
-                    if (sum == target)
+                    if (sum == target && j < arr1.Length)
                     {
-                        Console.WriteLine(arr1[i] + "," +  arr1[j]);
-
+                        Console.WriteLine(i + "," + j);
+                        index1 = i;
+                        index2 = j;
+                        Console.WriteLine(sum);
                     }
-                    else
-                    {
-                        Console.WriteLine("No integers with the tageted sum could be found");
-                    }
+                    
                 }
+
+            }
+            if (index2 == 0 && index2 == 0)
+            {
+                Console.WriteLine("no integers with the tageted sum could be found");
             }
             Console.Read();
         }
